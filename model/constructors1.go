@@ -1,4 +1,4 @@
-package models
+package model
 
 func NewCustomer(id string, firstname string, lastname string, email string, address Address,
 	createdAt string, updatedAt string) (Customer, error) {

@@ -1,9 +1,11 @@
-package models
+package model
 
 import "fmt"
 
-/*la structure Product implemente la methode PrintStockProduct()
-de l'interface ProductService*/
+/*
+la structure Product implemente la methode PrintStockProduct()
+de l'interface ProductService
+*/
 func (Product) PrintStockProduct(p Product) {
 	fmt.Println("{")
 	fmt.Printf("    Id: %s\n", p.Uuid)

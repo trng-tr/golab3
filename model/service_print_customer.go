@@ -1,9 +1,11 @@
-package models
+package model
 
 import "fmt"
 
-/*la structure Customer implemente la methode PrintCustomer()
-de l'interface CustomerService*/
+/*
+la structure Customer implemente la methode PrintCustomer()
+de l'interface CustomerService
+*/
 func (Customer) PrintCustomer(c Customer) {
 	fmt.Println("{")
 	fmt.Println(" customer {")

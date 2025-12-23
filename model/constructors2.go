@@ -1,4 +1,4 @@
-package models
+package model
 
 func NewProduct(id string, sku string, productName string, description string, price Price,
 	stock Stock, createdAt string, updatedAt string, isActive bool) (Product, error) {

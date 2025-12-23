@@ -1,4 +1,4 @@
-package models
+package model
 
 type Customer struct {
 	Id        string

@@ -1,9 +1,11 @@
-package models
+package model
 
 import "fmt"
 
-/*la structure Order implemente la methode PrintOrder()
-de l'interface OrderService*/
+/*
+la structure Order implemente la methode PrintOrder()
+de l'interface OrderService
+*/
 func (Order) PrintOrder(o Order) {
 	fmt.Println("{")
 	fmt.Printf("  id: %s\n", o.Id)
