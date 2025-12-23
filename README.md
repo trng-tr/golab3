@@ -2,7 +2,8 @@
 Implementation des interfaces par des structures
 
 1. interface
-```type InterfaceName interface {
+```
+type InterfaceName interface {
   Method1() 
   Method2() (StructureName, errors)
   Method3(params type) (StructureName, errors)
@@ -10,14 +11,16 @@ Implementation des interfaces par des structures
 ```
 
 2. strcuture
-```type StructureName struct {
+```
+type StructureName struct {
   varName1 type
   varName2 type
 }
 ```
 3. structure implements interface
 
-```func (StrcutureName) Method1() {
+```
+func (StrcutureName) Method1() {
   // instructions ...
 }
 func (StrcutureName) Method2() (StructureName, errors) {
