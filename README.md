@@ -23,6 +23,7 @@ type StructureName struct {
 func (StrcutureName) Method1() {
   // instructions ...
 }
+
 func (StrcutureName) Method2() (StructureName, errors) {
   // instructions ...
   return structure, nil
