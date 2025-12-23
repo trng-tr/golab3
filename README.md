@@ -17,7 +17,7 @@ Implementation des interfaces par des structures
 ```
 3. structure implements interface
 
-func (StrcutureName) Method1() {
+```func (StrcutureName) Method1() {
   // instructions ...
 }
 func (StrcutureName) Method2() (StructureName, errors) {
@@ -29,3 +29,4 @@ func (StrcutureName) Method3(params type) (StructureName, errors) {
   // instructions ...
   return structure, nil
 }
+```
