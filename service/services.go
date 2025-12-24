@@ -20,7 +20,7 @@ type OrderLineService interface {
 }
 
 type OrderService interface {
-	CreateOrder(nbItems int, customer model.Customer) (model.Order, error)
+	CreateOrder(c model.Customer, ol []model.OrderLine) (model.Order, error)
 	PrintOrder(o model.Order)
 	AddOrderLineToOrder(line model.OrderLine) model.Order
 }

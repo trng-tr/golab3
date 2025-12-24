@@ -51,7 +51,7 @@ func main() {
 
 	//la structure Order implement interface OrderService👇
 	var orderSvc = model.Order{}
-	order, err := orderSvc.CreateOrder(nb, customer, ordeLines)
+	order, err := orderSvc.CreateOrder(customer, ordeLines)
 	if err != nil {
 		fmt.Println(err)
 		return
