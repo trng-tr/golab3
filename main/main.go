@@ -36,24 +36,33 @@ func main() {
 	for _, product := range stock {
 		pdtService.PrintStockProduct(product)
 	}
+
+	var ordeLines []model.OrderLine = make([]model.OrderLine, 0, nb)
+	// la struture OrderLine implemente l'interface OrderLineService👇
+	var orderLineSvc service.OrderLineService = model.OrderLine{}
+	for i := 1; i <= nb; i++ {
+		orderLine, err := orderLineSvc.CreateOrderLine(i)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		ordeLines = append(ordeLines, orderLine)
+	}
+
 	//la structure Order implement interface OrderService👇
 	var orderSvc = model.Order{}
-	order, err := orderSvc.CreateOrder(nb, customer)
+	order, err := orderSvc.CreateOrder(nb, customer, ordeLines)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	orderSvc.PrintOrder(order)
-	//la structure OrderLine implement interface OrderLineService👇
-	var orderLineSvc service.OrderLineService = model.OrderLine{}
+	// une nouvelle orderLine
 	orderLine, err := orderLineSvc.CreateOrderLine(len(order.OrderLines) + 1)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	// la structure Order define la méthode AddOrderLineToOrder👇
-	// mais ce n'est pas une méthode d interface
 	var orderNew = order.AddOrderLineToOrder(orderLine)
 	orderSvc.PrintOrder(orderNew)
-
 }

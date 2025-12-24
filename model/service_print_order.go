@@ -2,6 +2,7 @@ package model
 
 import "fmt"
 
+//PrintOrder
 /*
 la structure Order implemente la methode PrintOrder()
 de l'interface OrderService

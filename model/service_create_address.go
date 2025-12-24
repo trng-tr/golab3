@@ -11,9 +11,10 @@ import (
 	"github.com/trng-tr/golab3/uuid"
 )
 
+//CreateAddress
 /*
-la structure Address implemente la methode CreateAddress
-de l'interface AddressService
+la structure Address implement la methode CreateAddress
+de l interface AddressService
 */
 func (Address) CreateAddress() (Address, error) {
 	fmt.Print("Saisir le numero de la maison: ")
@@ -35,7 +36,7 @@ func (Address) CreateAddress() (Address, error) {
 	}
 	streetName = strings.TrimSpace(streetName)
 
-	var id string = uuid.GenerateUuid((streetName))
+	var id string = uuid.GenerateUuid(streetName)
 
 	fmt.Print("Saisir la boite postale: ")
 	zipCode, err := reader.StreamReader.ReadString('\n')

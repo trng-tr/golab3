@@ -5,5 +5,5 @@ const (
 	EmptyStrError   string = "error: chaine vide"
 	ShortStrError   string = "error: chaine trop courte"
 	InvalidNbrError string = "error: nombre invalide"
-	ConversionError string = "Error: erreur de conversion"
+	ConversionError string = "error: erreur de conversion"
 )

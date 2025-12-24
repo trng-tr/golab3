@@ -38,7 +38,7 @@ func (Customer) CreateCustomer(address Address) (Customer, error) {
 	}
 	email = strings.TrimSpace(email)
 	if !isValidEmail(email) {
-		return Customer{}, errors.New("Email invalid")
+		return Customer{}, errors.New("email invalid")
 	}
 	var createdAt string = time.Now().Format("2006-01-01 15:01:06")
 	c, err := NewCustomer(uuid, firstname, lastname, email, address, createdAt, "")
@@ -48,7 +48,7 @@ func (Customer) CreateCustomer(address Address) (Customer, error) {
 	return c, nil
 }
 
-// packge Go net/mail pr valider un email
+// package Go net/mail pr valider un email
 func isValidEmail(email string) bool {
 	_, err := mail.ParseAddress(email)
 	return err == nil
